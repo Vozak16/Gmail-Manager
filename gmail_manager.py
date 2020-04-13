@@ -1,25 +1,24 @@
-from datetime import date
-
-
-class Auth:
-    def __init__(self):
-        self.service = None
-
-    def authorization(self):
-        pass
-
-    def set_service(self):
-        pass
+"""
+This module ...
+"""
+import datetime
+import time
+import re
+from auth_adt import Auth
 
 
 class GUser:
+    """
+    Class provides Gmail user's interface.
+    """
     def __init__(self):
         """
         Initialize a user inbox
         """
         self.userId = 'me'
         self.end_date = self.get_end_date()
-        self.service = Auth().service
+        self.service = None
+        self.set_service()
 
     @staticmethod
     def get_end_date():
@@ -28,7 +27,7 @@ class GUser:
         (eg. "2020-04-07")
         :return: str
         """
-        date_now = str(date.today())
+        date_now = str(datetime.date.today())
         year, month, day = date_now.split('-')
 
         if int(month) == 1:
@@ -43,34 +42,84 @@ class GUser:
         end_date = '-'.join([year, prev_month, day])
         return end_date
 
-    def get_service(self):
+    @staticmethod
+    def get_message_date(message):
+        """
+        Returns the message date with special formatting.
+        :param message: dict
+        :return: string
+        """
+        iternal_date = int(message["internalDate"][:-3])
+        return datetime.datetime.fromtimestamp(iternal_date)
+
+    def set_service(self):
         """
         Return a service got by user's credentials
-        :return:
+        :return: None
         """
-        pass
+        authenticator = Auth()
+        self.service = authenticator.service
 
     def get_inbox_info(self):
         """
         Return a dict that has sender as a key and number of messages as a value
         :return: inbox_info = {from (str): value (int), ...}
         """
-        pass
+        print('kak1')
+        user_message_id_lst = self.get_user_messages_lst()
+        inbox_info_dict = dict()
+        for i in user_message_id_lst:
+            sender_email = self.retrieve_sender_info(i["id"])[1]
+            if not sender_email:
+                print('kaka')
+                break
+            if sender_email in inbox_info_dict.keys():
+                inbox_info_dict[sender_email] += 1
+            else:
+                inbox_info_dict[sender_email] = 1
+        print(inbox_info_dict)
+        return inbox_info_dict
 
-    def get_sender_info(self):
+    def get_user_messages_lst(self, ladelids=['INBOX']):
         """
-        Return a sender info as <name> <email>
-        :return: str
+        Returns user messages list, which contains only an id and a threadId.
+        Additional message details can be fetched using the messages.get method.
+        :return: list of dict [{'id': '1714f35d4d28e916', 'threadId': '1714f35d4d28e916'}, ...]
         """
-        pass
+        results = self.service.users().messages().list(userId='me', labelIds=ladelids, maxResults=500).execute()
+        # тут треба продумати що буде якшо за ост місяць більше ніж 500 повідомлень
+        # print(results)
+        messages_lst = results['messages']
+        return messages_lst
 
-    def is_valid_date(self):
+    def retrieve_sender_info(self, message_id):
+        """
+        Retrieves such information as name of the sender and its email address.
+        :message_id: str
+        :return: tuple of str  = ("name", "email")
+        """
+        time1 = time.time()
+        message = self.service.users().messages().get(userId=self.userId, id=message_id, format="metadata",
+                                                      metadataHeaders=["From"]).execute()
+        # print(message)
+        time2 = time.time()
+        print("new message, time =", time2 - time1)
+        if self.is_valid_date(message):
+
+            sender_email = re.findall("<.*>", message["payload"]["headers"][0]["value"])[0]
+            sender_name = message["payload"]["headers"][0]["value"]
+            return sender_name, sender_email
+
+        return None
+
+    @staticmethod
+    def is_valid_date(message):
         """
         Return True if a message date is bigger than the end date,
         False otherwise
         :return: bool
         """
-        pass
+        return True
 
     def get_unread_number(self):
         """
@@ -93,3 +142,7 @@ class GUser:
     def remove_label(self):
         pass
 
+if __name__ == "__main__":
+
+    gmail_user = GUser()
+    print(gmail_user.get_inbox_info())
