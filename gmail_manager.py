@@ -69,7 +69,7 @@ class GUser:
         user_message_id_lst = self.get_user_messages_lst()
         inbox_info_dict = dict()
         for i in user_message_id_lst:
-            sender_email = self.retrieve_sender_info(i["id"])[1]
+            sender_email = self.retrieve_sender_info(i["id"])[0]
             if not sender_email:
                 print('kaka')
                 break
@@ -108,6 +108,7 @@ class GUser:
 
             sender_email = re.findall("<.*>", message["payload"]["headers"][0]["value"])[0]
             sender_name = message["payload"]["headers"][0]["value"]
+            sender_name = sender_name[:sender_name.index("<")].strip()
             return sender_name, sender_email
 
         return None
@@ -146,4 +147,3 @@ if __name__ == "__main__":
 
     gmail_user = GUser()
     print(gmail_user.get_inbox_info())
-    print("Hello World!")
