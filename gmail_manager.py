@@ -4,6 +4,7 @@ This module ...
 import datetime
 import time
 import re
+import json
 from auth_adt import Auth
 
 
@@ -144,6 +145,16 @@ class GUser:
         """
         service.users().messages().trash(user_id=self.user_id,
                                          id=message_id).execute()
+    @staticmethod
+    def write_json(inbox_info_dict):
+        """
+        This function loads the data from the dictionary to json file.
+        Namely, it loads the data got from GUser.get_inbox_info method.
+        :param message: dict
+        :return: None
+        """
+        with open("inbox_info.json", 'w') as json_file:
+            json.dump(inbox_info_dict, json_file, indent=4, ensure_ascii=False)
 
     def unsubscribe(self):
         pass
@@ -156,4 +167,6 @@ if __name__ == "__main__":
 
     # testing get_inbox_info() method
     GMAIL_USER = GUser()
-    print(GMAIL_USER.get_inbox_info())
+    senders_info = GMAIL_USER.get_inbox_info()
+    print(senders_info)
+    GMAIL_USER.write_json(senders_info)
