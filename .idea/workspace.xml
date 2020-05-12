@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="" />
+    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/program_modules/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/auth_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/credentials.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmail_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/gmail_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inbox_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/output_data_examples/inbox_info.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +37,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/program_modules" />
+      <recent name="$PROJECT_DIR$/output_data_examples" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -70,6 +98,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
