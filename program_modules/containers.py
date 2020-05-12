@@ -120,7 +120,7 @@ class SimpleDictionary:
         hashed_key = hash(key) % self.size
         return hashed_key
 
-    def set(self, key, value):
+    def _set(self, key, value):
         """
         Set a (key, value) tuple into our HashMap
 
@@ -143,7 +143,7 @@ class SimpleDictionary:
         else:
             slot.append((key, value))
 
-    def get(self, key):
+    def _get(self, key):
         """
         Get a value by a hashed key
 
@@ -168,7 +168,7 @@ class SimpleDictionary:
         :param value: any
         :return: method
         """
-        self.set(key, value)
+        self._set(key, value)
 
     def __getitem__(self, key):
         """
@@ -177,4 +177,4 @@ class SimpleDictionary:
         :param key: any
         :return: any
         """
-        return self.get(key)
+        return self._get(key)
