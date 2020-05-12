@@ -1,11 +1,11 @@
 """
 This module ...
 """
+from program_modules.auth_adt import Auth
 import datetime
 import time
 import re
 import json
-from auth_adt import Auth
 
 
 class GUser:
@@ -50,8 +50,8 @@ class GUser:
         :param message: dict
         :return: string
         """
-        iternal_date = int(message["internalDate"][:-3])
-        return datetime.datetime.fromtimestamp(iternal_date)
+        internal_date = int(message["internalDate"][:-3])
+        return datetime.datetime.fromtimestamp(internal_date)
 
     def set_service(self):
         """
@@ -85,6 +85,7 @@ class GUser:
         Returns user messages list, which contains only an id and a threadId.
         Additional message details can be fetched
         using the messages.get method.
+
         :return: list of dict [{'id': '1714f35d4d28e916',
                                 'threadId': '1714f35d4d28e916'}, ...]
         """
@@ -101,6 +102,7 @@ class GUser:
         """
         Retrieves such information as name of the sender and its email address.
         :message_id: str
+
         :return: tuple of str  = ("name", "email")
         """
         time1 = time.time()
@@ -108,7 +110,6 @@ class GUser:
                                                       id=message_id,
                                                       format="metadata",
                                                       metadataHeaders=["From"]).execute()
-        # print(message)
         time2 = time.time()
         print("new message proceeded, time =", time2 - time1)
         if self.is_valid_date(message):
@@ -126,6 +127,7 @@ class GUser:
         """
         Return True if a message date is bigger than the end date,
         False otherwise
+
         :return: bool
         """
         return True
@@ -133,6 +135,7 @@ class GUser:
     def get_unread_number(self):
         """
         Return a number of unread messages that are up to end date
+
         :return: int
         """
         pass
@@ -140,17 +143,19 @@ class GUser:
     def delete_message(self, service, message_id):
         """
         Delete a certain message by message ID
+
         :param service:
         :param message_id: str
         """
         service.users().messages().trash(user_id=self.user_id,
                                          id=message_id).execute()
+
     @staticmethod
     def write_json(inbox_info_dict):
         """
         This function loads the data from the dictionary to json file.
         Namely, it loads the data got from GUser.get_inbox_info method.
-        :param message: dict
+        :param inbox_info_dict: dict
         :return: None
         """
         with open("inbox_info.json", 'w') as json_file:
@@ -161,12 +166,3 @@ class GUser:
 
     def remove_label(self):
         pass
-
-
-if __name__ == "__main__":
-
-    # testing get_inbox_info() method
-    GMAIL_USER = GUser()
-    senders_info = GMAIL_USER.get_inbox_info()
-    print(senders_info)
-    GMAIL_USER.write_json(senders_info)

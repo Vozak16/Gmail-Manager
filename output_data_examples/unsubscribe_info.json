@@ -1,0 +1,54 @@
+{
+    "=?UTF-8?B?V2l4LmNvbQ==?=": {
+        "sub_url": "https://emails.wix.com/pub/optout/UnsubscribeOneStepConfirmAction?YES=true&_ri_=X0Gzc2X%3DYQpglLjHJlTQGnNPJGSji1O1wWMDJfWYjT1M4M2vJASA4MGzdY1vRzeJKoq0cOPoOzcnqs5KIlzbq1UIFoeKIO&_ei_=EolaGGF4SNMvxFF7KucKuWPkSVhShOm82e6k_eLnvt9nTxQKpDufZQzZAjp1wFjA70093LsCKua-GpvTuB_G-6w1OKHEV6bx-lyOVvLeNzofxziMhaBfuj4nfpdUOgfTT-nhdVrgshVcsLl_mM.",
+        "msg_ids": [
+            "1719c759c709740b",
+            "17197a13787c6550",
+            "1717d9b7b3b55a54",
+            "1717858135c07502",
+            "171308100949aa2e",
+            "1712b320d4fdc1a3",
+            "171129f3b9d7e02f",
+            "1710c1627c3b21c0",
+            "170c94c823dd1197",
+            "170c40911104bdc0"
+        ]
+    },
+    "\"World of Tanks\"": {
+        "sub_url": "https://list-unsubscribe.eservice.emarsys.net/api/unsubscribe/278799761_1826859_1896792_kbgYPMPsyx",
+        "msg_ids": [
+            "17188769c7236523",
+            "170fad1b145683f9"
+        ]
+    },
+    "\"GitHub\"": {
+        "sub_url": "mailto:unsubscribe@sgmail.github.com?subject=https://u15762298.ct.sendgrid.net/wf/unsubscribe*q*upn=Hv-2F5dey4q2VYZWx90LgwMQg133VlTV73NLCJmDCk3RsNAiTESC5XZ0urNIwSU0UABjsmz-2FCkww-2BodeJy-2BWu0Eg155fzLYHZk1CN4tlZ0dhX9oths-2Fu2LBygaFwzxeegWQLhdA1DtYhduRRXO7ItcE8S5a5DBoVSmmoDW1BYLVx9RUFbAZhiMteXzjWmkNQx27etevTxLFHdPBie8vpflRilmF7vHx-2FuBS5zfG4jlfDp8ueVaMv8d483AZ-2BsWTeKwNTeL8SlIcGFTnzSCIcd3ho-2BaPCGb3GRO3lepnK3XB-2F6I7LJaJamaYoiSds50nr0PYuxRzjgq6w5vPbZs4BZP4-2FFaRIJZoUiyriNpFu2jDNlSdoeFyp6Ge3pyNU-2B6h-2F7nAciL0MFAQn3J2thMz3U2LFPr5LIE5tp-2BaVPPwUYK3UNgxYM9OKYs4XqmNTfuCl2J6hoziEGw146BfK3rp8WJiw7ZdbOTjZXZc4pC4d9wrEdHDvs0LysFEM-2FyNjpWgLMOXWeW0tdCi6SZtQHYk-2Bxreo1M1bmI0OqeU3rwKZCeU2Fu5mhdOdcawl0AF6rJj0vK398GmSRKOsLH56CJpH8NwCH0M-2BcNizD8xJLdwdI2KcwwXraaJ-2BIjp34ydwWm4Oe3ilb-2B86XTM05UdUVZVQwrWuWzEdqAv66qZTIZFHI5iufBgmDbBy95QfH6A1eDymLreCeTN4u2wf4y2eOi8wJQ4w-3D-3D",
+        "msg_ids": [
+            "1717a88b1540a966"
+        ]
+    },
+    "Fishka": {
+        "sub_url": "http://esputnik.com/message-service/v1/unsubscribe/03f6f803-2216-4b98-b9f7-352208e094ee",
+        "msg_ids": [
+            "171605f5c5eed1c6",
+            "1711c6b131734b0d",
+            "170ee9d39fdcd1ef",
+            "170cf99f05d619c6",
+            "170b965ff2172bd6",
+            "170af19d3c32fee2"
+        ]
+    },
+    "\"World of Tanks Blitz\"": {
+        "sub_url": "https://list-unsubscribe.eservice.emarsys.net/api/unsubscribe/286670809_1806931_4804493_SFa1FQCLga",
+        "msg_ids": [
+            "170fd9c9899bd954"
+        ]
+    },
+    "Multiplex": {
+        "sub_url": "http://esputnik.com/message-service/v1/unsubscribe/9cd400ee-6482-4540-9eb8-48f97789a261",
+        "msg_ids": [
+            "170ed53ec65917b2",
+            "170b0c9aca0d0c23"
+        ]
+    }
+}
