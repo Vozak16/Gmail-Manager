@@ -21,6 +21,14 @@ class GUser:
         self.service = None
         self.set_service()
 
+    def set_service(self):
+        """
+        Return a service got by user's credentials
+        :return: None
+        """
+        authenticator = Auth()
+        self.service = authenticator.service
+
     @staticmethod
     def get_end_date():
         """
@@ -53,17 +61,9 @@ class GUser:
         iternal_date = int(message["internalDate"][:-3])
         return datetime.datetime.fromtimestamp(iternal_date)
 
-    def set_service(self):
-        """
-        Return a service got by user's credentials
-        :return: None
-        """
-        authenticator = Auth()
-        self.service = authenticator.service
-
     def get_inbox_info(self):
         """
-        Return a dict that has sender as a key and number
+        Return a dictionary that has sender as a key and number
         of messages as a value.
         :return: inbox_info = {from (str): value (int), ...}
         """
@@ -93,7 +93,7 @@ class GUser:
                                                        maxResults=20).execute()
         # тут треба продумати що буде якшо за ост
         # місяць більше ніж 500 повідомлень
-        # print(results)
+        print(results)
         messages_lst = results['messages']
         return messages_lst
 
@@ -150,7 +150,7 @@ class GUser:
         """
         This function loads the data from the dictionary to json file.
         Namely, it loads the data got from GUser.get_inbox_info method.
-        :param message: dict
+        :param inbox_info_dict: dict
         :return: None
         """
         with open("inbox_info.json", 'w') as json_file:
