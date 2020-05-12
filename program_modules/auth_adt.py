@@ -13,7 +13,8 @@ class Auth:
     Class provides Gmail user's authentication.
     """
     SCOPES = ['https://www.googleapis.com/auth/gmail.readonly',
-              'https://www.googleapis.com/auth/gmail.labels']
+              'https://www.googleapis.com/auth/gmail.labels',
+              'https://www.googleapis.com/auth/gmail.modify']
 
     def __init__(self):
         """
@@ -42,7 +43,7 @@ class Auth:
                 credentials.refresh(Request())
             else:
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    'credentials.json', self.SCOPES)
+                    '../credentials.json', self.SCOPES)
                 credentials = flow.run_local_server(port=0)
             # Save the credentials for the next run
             with open('token.pickle', 'wb') as token:

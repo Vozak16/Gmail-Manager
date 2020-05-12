@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/program_modules/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/auth_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/credentials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmail_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/gmail_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/output_data_examples/inbox_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/program_modules/auth_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/auth_adt.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +36,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/program_modules" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/output_data_examples" />
     </key>
   </component>
@@ -80,6 +75,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_unsubscribe_adt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Gmail-Manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adt_work_examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adt_work_examples/test_unsubscribe_adt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_unsubscribe_adt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -94,6 +116,21 @@
       <workItem from="1586697882125" duration="2800000" />
       <workItem from="1587025946620" duration="11000" />
     </task>
+    <task id="LOCAL-00001" summary="hid 2 functions">
+      <created>1589270728255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589270728255</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ADT work examples created">
+      <created>1589282108204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589282108204</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,11 +141,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hid 2 functions" />
+    <MESSAGE value="ADT work examples created" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADT work examples created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
