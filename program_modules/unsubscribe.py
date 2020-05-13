@@ -86,7 +86,7 @@ class GUnsubscribe:
         """
         results_ = self.service.users().messages().list(userId='me', labelIds=[category]).execute()
         messages = results_.get('messages')
-
+        # print(len(messages))
         for msg in messages:
             msg_id = msg['id']
             msg_str = self.get_message(msg_id)

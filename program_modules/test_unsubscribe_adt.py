@@ -1,11 +1,11 @@
-from program_modules.unsubscribe import GUnsubscribe
+from .unsubscribe import GUnsubscribe
 import urlfetch
 
 
 def main():
     """
     Show the example of work of Unsubscribe ADT
-    :return:
+    :return: None
     """
     sender_info = GUnsubscribe()
     sender_info.get_subscription_info('CATEGORY_PROMOTIONS')
