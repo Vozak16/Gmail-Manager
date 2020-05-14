@@ -1,9 +1,10 @@
 """
 This module ...
 """
-from .auth_adt import Auth
+from auth_adt import Auth
 import datetime
 import re
+import time
 import json
 
 
@@ -74,7 +75,8 @@ class GUser:
         """
         Return a dictionary that has sender as a key and number
         of messages as a value.
-        :return: inbox_info = {from (str): value (int), ...}
+        :return: inbox_info = {from (str): tuple(value (int),
+        sender_name, sender_msg_id), ...}
         """
         user_message_id_lst = self.messages_by_category_dict[ladelid]
         inbox_info_dict = dict()
@@ -82,22 +84,37 @@ class GUser:
         label_message_id_set = set()
         for i in user_message_id_lst:
             label_message_id_set.add(i["id"])
-
+        senders_num = 0
+        total_time = 0
         while label_message_id_set:
             sender_info = self.retrieve_sender_info(next(iter(label_message_id_set)))
             # tuple:(sender_email, sender_name)
             if not sender_info:
                 print("There is an error in retrieving sender info")
                 break
-            sender_email = sender_info[0]
+            try:
+                sender_email = sender_info[1]
+            except KeyError:
+                sender_email = sender_info[0]
+            time1 = time.time()
             sender_message_id_lst = self.get_user_messages_lst(ladelid, sender_email)
+            time2 = time.time()
+            total_time += time2 - time1
+            print("new message proceeded, time =", time2 - time1)
+
+            senders_num += 1
             for i in sender_message_id_lst:
                 sender_message_id_set.add(i["id"])
             if sender_email in inbox_info_dict.keys():
+                print('Something go wrong')
                 inbox_info_dict[sender_email] += 1
             else:
-                inbox_info_dict[sender_email] = len(sender_message_id_set)
+                inbox_info_dict[sender_email] = (len(sender_message_id_set),
+                                                 sender_info[0], next(iter(sender_message_id_set)))
             label_message_id_set = label_message_id_set - sender_message_id_set
+            sender_message_id_set.clear()
+        print('senders=', senders_num)
+        print('total time', total_time)
         return inbox_info_dict
 
     def get_inbox_info_old(self):
@@ -106,7 +123,7 @@ class GUser:
         of messages as a value.
         :return: inbox_info = {from (str): value (int), ...}
         """
-        user_message_id_lst = self.get_user_messages_lst(ladelids='CATEGORY_PERSONAL')
+        user_message_id_lst = self.get_user_messages_lst(ladelids='INBOX')
         inbox_info_dict = dict()
         for i in user_message_id_lst:
             sender_email = self.retrieve_sender_info(i["id"])
@@ -141,7 +158,10 @@ class GUser:
                                                        maxResults=500, q=query).execute()
 
         # print(results)
-        messages_lst = results['messages']
+        try:
+            messages_lst = results['messages']
+        except KeyError:
+            return []
         return messages_lst
 
     def retrieve_sender_info(self, message_id):

@@ -1,5 +1,5 @@
-from .gmail_manager import GUser
-
+from gmail_manager import GUser
+import time
 
 def main():
     """
@@ -20,14 +20,21 @@ def main():
     print(GMAIL_USER.label_types)
     chosen_category = input("Please choose and enter the category from the list above, "
                             "you want to get more detailed information about senders:")
-    print("Please, wait from 5 to 10 seconds")
+    print("Please, wait :)")
     print()
-    senders_dict = GMAIL_USER.get_inbox_info()
+    time1 = time.time()
+    senders_dict = GMAIL_USER.get_inbox_info(chosen_category)
+    time2 = time.time()
+    print("get_inbox_info proceeded, time =", time2 - time1)
     print("Dictionary above shows the quantity of messages for each"
           " senders in the category {} during the last 30 days.".format(chosen_category))
     print(senders_dict)
-    print("The total amount of messages in the category {}:".format(chosen_category),
+    print("The total amount of senders in the category {}:".format(chosen_category),
           len(senders_dict))
+    """senders_dict = GMAIL_USER.get_inbox_info_old()
+    print(senders_dict)
+    print(len(senders_dict))"""
+
 
 
 if __name__ == '__main__':
