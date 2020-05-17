@@ -1,0 +1,293 @@
+body {
+    font-family: main;
+    margin: 0 auto;
+    background-image: url(../../Images/bg.png);
+}
+
+pre {
+    font-family: main;
+}
+
+.MainGrid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 40px;
+    grid-auto-rows: 800px;
+}
+
+.ContentInner {
+    display: grid;
+    grid-template-columns: repeat(4, 31%);
+    grid-template-rows: 285px 285px;
+    grid-column-gap: 1.9%;
+    grid-row-gap: 3.9%;
+    padding-top: 1.9%;
+}
+
+.WelcomeBlock {
+    background-image: url(../../Images/Banner-1.png);
+    background-size: cover;
+    grid-column: 1/ 3;
+    border-radius: 35px;
+    transition: 0.5s;
+}
+
+.WelcomeBlock:hover {
+    animation-name: center;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.WelcomeBlock:not(:hover) {
+    animation-name: center_r;
+    animation-duration: 0.5s;
+}
+
+@keyframes center {
+    0% {
+        background-position: none;
+    }
+    100%{
+        background-position: center;
+    }
+}
+
+@keyframes center_r {
+    0% {
+        background-position: center;
+    }
+    100%{
+        background-position: none;
+    }
+}
+
+.InboxBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../Images/inbox-bg.png);
+}
+
+.UnreadBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    grid-row: 2;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../Images/unread-bg.png);
+}
+
+.InstructionBlock {
+    background-image: url(../../Images/Banner-2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    width: 97%;
+    height: 60px;
+    margin-top: 40px;
+}
+
+.Menu {
+    background-color: white;
+}
+
+.MenuBlockText {
+    margin-left: 8%;
+    color: #A8A8A8;
+    font-size: 18px;
+    user-select: none;
+}
+
+
+.HomeButton {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #606060;
+}
+
+.submit_btn {
+    padding-left: 20px;
+    outline: none;
+    background: none;
+    border: 0;
+    font-size: 17px;
+    cursor: pointer;
+    color: #606060;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_form {
+    display: flex;
+    align-items: center
+}
+
+.HomeButton:hover {
+    background-color: #f8f9f9;
+}
+
+.HomeButtonIco {
+    align-self: center;
+    margin-left: 8%;
+}
+
+.AboutButton {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.AboutButton:hover {
+    background-color: #f8f9f9;
+}
+
+.AboutButtonIco {
+    align-self: center;
+    margin-left: 8%;
+}
+
+.PrimaryButton {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.PrimaryButton:hover {
+    background-color: #f8f9f9;
+}
+
+.PrimaryButtonIco {
+    align-self: center;
+    margin-left: 8%;
+}
+
+.SocialButton {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.SocialButton:hover {
+    background-color: #f8f9f9;
+}
+
+.SocialButtonIco {
+    align-self: center;
+    margin-left: 8%;
+}
+
+.PromotionsButton {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.PromotionsButton:hover {
+    background-color: #f8f9f9;
+}
+
+.PromotionsButtonIco {
+    align-self: center;
+    margin-left: 8%;
+}
+
+.MenuInBlockText {
+    color: #606060;
+    margin-left: 8%;
+    font-size: 18px;
+    user-select: none;
+}
+
+.MenuImageBox {
+    display: flex;
+    justify-content: center;
+}
+
+.MenuImage {
+    margin-top: 10%;
+    background-image: url(../../Images/Icons/MenuImg.png);
+    height: 84px;
+    width: 64px;
+    background-size: cover;
+    background-position: center;
+}
+
+.Links {
+    display: flex;
+    justify-content: flex-start;
+    width: 15%;
+    height: 100%;
+}
+
+.LinkIcons {
+    align-self: center;
+    margin-left: 10%;
+    width: 20px;
+    height: 20px;
+}
+
+.AuthorizationInformation {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    height: 100%;
+}
+
+.UserImage {
+    align-self: center;
+    width: 39px;
+    height: 39px;
+    margin-right: 10%;
+}
+
+.UserName {
+    margin-right: 3%;
+    align-self: center;
+    font-size: 16px;
+    color: #231F20;
+}
+
+.UnderUserName {
+    font-size: 8px;
+    align-self: center;
+}
+
+.Site {
+    margin-left: 10%;
+    margin-top: 15%;
+}
+
+.Inbox {
+    margin-left: 10%;
+    margin-top: 15%;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="static/css/get_started/gs_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<title>Get Started</title>
+</head>
+
+<body style="background-image: url({% static 'img/Get_Started_BG.png' %})">
+	<div class="logo-box">
+		<div class="logo">
+			<img src="../static/img/Logo.png">
+		</div>
+	<form action="/home" method="GET">
+		<input class="btn" type="submit" name="startbtn" value="GET STARTED">
+	</form>
+	</div>
+
+	<div class="git">
+		<ul>
+			<li><a href="https://github.com/Vozak16/Gmail-Manager" title="GitHub"><i class="fab fa-github"></i></a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

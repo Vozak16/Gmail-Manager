@@ -1,0 +1,8 @@
+{% extends 'home_page/home_page.html' %}
+
+<!-- Receives data from view.py -->
+<script>
+{% block jquery %}
+        {% include 'home_page/base/chart_script.js' with posts=postdata %}
+{% endblock %}
+</script>
