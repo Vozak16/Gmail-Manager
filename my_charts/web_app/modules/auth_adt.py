@@ -2,7 +2,7 @@
 This module implements auth ADT.
 """
 import pickle
-import os.path
+import os
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -12,9 +12,7 @@ class Auth:
     """
     Class provides Gmail user's authentication.
     """
-    SCOPES = ['https://www.googleapis.com/auth/gmail.readonly',
-              'https://www.googleapis.com/auth/gmail.labels',
-              'https://www.googleapis.com/auth/gmail.modify']
+    SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
     def __init__(self):
         """
@@ -58,3 +56,11 @@ class Auth:
         """
         credentials = self.authorization()
         self.service = build('gmail', 'v1', credentials=credentials)
+
+    @staticmethod
+    def delete_token():
+        """
+        Deleting token.pickle file.
+        :return: None
+        """
+        os.remove(os.path.abspath('token.pickle'))

@@ -1,7 +1,7 @@
 """
 This module ...
 """
-from auth_adt import Auth
+from .auth_adt import Auth
 import datetime
 import re
 import time
@@ -23,13 +23,33 @@ class GUser:
         self.today_date = datetime.datetime.today()
         self.service = None
         self.set_service()
-        self.label_types = ['UNREAD', 'INBOX', 'CATEGORY_PERSONAL', 'CATEGORY_SOCIAL',
-                            'CATEGORY_PROMOTIONS', 'CATEGORY_UPDATES', 'CATEGORY_FORUMS']
+        self.label_types = [('UNREAD', 'Unread'), ('INBOX', 'Inbox'),
+                            ('CATEGORY_PERSONAL', 'Primary'),
+                            ('CATEGORY_SOCIAL', 'Social'),
+                            ('CATEGORY_PROMOTIONS', 'Promotions'),
+                            ('CATEGORY_UPDATES', 'Updates'),
+                            ('CATEGORY_FORUMS', 'Forums')]
+        self.defined_categories = ['Primary', 'Promotions',
+                                   'Updates', 'Social']
         self.categories_info_dict = dict()
+        self.defined_categories_info_dict = dict()
         self.messages_by_category_dict = dict()
         self.unread_info_dict = dict()
         self.get_categories_info()
         self.get_unread_info()
+        self.get_defined_categories_info()
+
+
+    def get_defined_categories_info(self):
+        """
+        Create (dict) defined_categories_info_dict =
+        {"Primary": num, 'Social':num,
+        "Updates": num, "Promotions": num}
+        :return: None
+        """
+        for i in self.defined_categories:
+            self.defined_categories_info_dict[i] = \
+                self.categories_info_dict[i]
 
     def set_service(self):
         """
@@ -39,6 +59,7 @@ class GUser:
         authenticator = Auth()
 
         self.service = authenticator.service
+        authenticator.delete_token() # delete token.pickle file
 
     def get_end_date(self):
         """
@@ -86,6 +107,7 @@ class GUser:
             label_message_id_set.add(i["id"])
         senders_num = 0
         total_time = 0
+        msg_num = 0
         while label_message_id_set:
             sender_info = self.retrieve_sender_info(next(iter(label_message_id_set)))
             # tuple:(sender_email, sender_name)
@@ -100,7 +122,7 @@ class GUser:
             sender_message_id_lst = self.get_user_messages_lst(ladelid, sender_email)
             time2 = time.time()
             total_time += time2 - time1
-            print("new message proceeded, time =", time2 - time1)
+            # print("new message proceeded, time =", time2 - time1)
 
             senders_num += 1
             for i in sender_message_id_lst:
@@ -112,29 +134,12 @@ class GUser:
                 inbox_info_dict[sender_email] = (len(sender_message_id_set),
                                                  sender_info[0], next(iter(sender_message_id_set)))
             label_message_id_set = label_message_id_set - sender_message_id_set
+            msg_num += len(sender_message_id_set)
             sender_message_id_set.clear()
+
         print('senders=', senders_num)
         print('total time', total_time)
-        return inbox_info_dict
-
-    def get_inbox_info_old(self):
-        """
-        Return a dictionary that has sender as a key and number
-        of messages as a value.
-        :return: inbox_info = {from (str): value (int), ...}
-        """
-        user_message_id_lst = self.get_user_messages_lst(ladelids='INBOX')
-        inbox_info_dict = dict()
-        for i in user_message_id_lst:
-            sender_email = self.retrieve_sender_info(i["id"])
-            if not sender_email:
-                print("There is an error in retrieving sender info")
-                break
-            sender_email = sender_email[0]
-            if sender_email in inbox_info_dict.keys():
-                inbox_info_dict[sender_email] += 1
-            else:
-                inbox_info_dict[sender_email] = 1
+        print('messages_category', msg_num)
         return inbox_info_dict
 
     def get_user_messages_lst(self, ladelids='INBOX', sender_email=None):
@@ -203,25 +208,29 @@ class GUser:
 
     def get_categories_info(self):
         """
-        Create (dict) messages_by_category_dict = {"Primary": list
-        of messages, "Updates": list, "Promotions": list}
-        Create (dict) categories_info_dict = {"Primary": num,
-        "Updates": num, "Promotions": num}
+        Create (dict) messages_by_category_dict = {"Unread": list,
+        "Inbox": list,"Primary": list, "Social": list,
+        "Promotions": list, "Updates": list, "Forums": list}
+        Create (dict) categories_info_dict = {"Unread": int, "Inbox": int,
+        "Primary": int, "Social": int, "Promotions": int, "Updates": int,
+        "Forums": int}
+        :return None
         """
-        for i in self.label_types:
-            messages_category_lst = self.get_user_messages_lst(i)
-            self.categories_info_dict[i] = len(messages_category_lst)
-            self.messages_by_category_dict[i] = messages_category_lst
+        for i in self.label_types[:6]:
+            messages_category_lst = self.get_user_messages_lst(i[0])
+            self.categories_info_dict[i[1]] = len(messages_category_lst)
+            self.messages_by_category_dict[i[0]] = messages_category_lst
 
     def get_unread_info(self):
         """
         Return a number of unread messages and read messages that are up to end date.
-        Create (dict) unread_info_dict = {"READ": num_all - num_unread, "UNREAD": num}
+        Create (dict) unread_info_dict = {"Read": num_all - num_unread, "Unread": num}
+        :return None
         """
-        unread_label = 'UNREAD'
-        read_label = 'READ'
+        unread_label = 'Unread'
+        read_label = 'Read'
         self.unread_info_dict[unread_label] = self.categories_info_dict[unread_label]
-        self.unread_info_dict[read_label] = self.categories_info_dict["INBOX"] \
+        self.unread_info_dict[read_label] = self.categories_info_dict["Inbox"] \
                                             - self.unread_info_dict[unread_label]
 
     def delete_message(self, message_id):
