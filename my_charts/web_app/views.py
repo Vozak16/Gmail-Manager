@@ -58,16 +58,19 @@ class ChartData(APIView):
 
         :return: response
         """
-        labels = ["Users", "Blue", "Yellow"]
-        default_items = [4, 2, 2]
-        colors = ['#6F6CB1', '#F7C362', '#86CEC1']
+        user = GUser()
+
+        labels = user.defined_categories_info_dict.keys()
+        default_items = user.defined_categories_info_dict.values()
+        colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#28C9D1']
         data = {
                 "labels": labels,
                 "default": default_items,
                 "colors": colors
         }
-        user = GUser()
+
         unread_info = user.unread_info_dict
+
         print(unread_info)
         data_unread = {
             "labels": unread_info.keys(),

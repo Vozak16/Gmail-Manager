@@ -29,11 +29,25 @@ class GUser:
                             ('CATEGORY_PROMOTIONS', 'Promotions'),
                             ('CATEGORY_UPDATES', 'Updates'),
                             ('CATEGORY_FORUMS', 'Forums')]
+        self.defined_categories = ['Primary', 'Social',
+                                   'Promotions', 'Updates']
         self.categories_info_dict = dict()
+        self.defined_categories_info_dict = dict()
         self.messages_by_category_dict = dict()
         self.unread_info_dict = dict()
         self.get_categories_info()
         self.get_unread_info()
+        self.get_defined_categories_info()
+
+    def get_defined_categories_info(self):
+        """
+        Create (dict) defined_categories_info_dict =
+        {"Primary": num, 'Social':num,
+        "Updates": num, "Promotions": num}
+        :return: None
+        """
+        for i in self.defined_categories:
+            self.defined_categories_info_dict[i] = self.categories_info_dict[i]
 
     def set_service(self):
         """
@@ -191,12 +205,15 @@ class GUser:
 
     def get_categories_info(self):
         """
-        Create (dict) messages_by_category_dict = {"Primary": int
-        of messages, "Social": int, "Promotions": int, "Updates": int, F}
-        Create (dict) categories_info_dict = {"Primary": num,
-        "Updates": num, "Promotions": num}
+        Create (dict) messages_by_category_dict = {"Unread": list,
+        "Inbox": list,"Primary": list, "Social": list,
+        "Promotions": list, "Updates": list, "Forums": list}
+        Create (dict) categories_info_dict = {"Unread": int, "Inbox": int,
+        "Primary": int, "Social": int, "Promotions": int, "Updates": int,
+        "Forums": int}
+        :return None
         """
-        for i in self.label_types:
+        for i in self.label_types[:6]:
             messages_category_lst = self.get_user_messages_lst(i[0])
             self.categories_info_dict[i[1]] = len(messages_category_lst)
             self.messages_by_category_dict[i[0]] = messages_category_lst
@@ -205,6 +222,7 @@ class GUser:
         """
         Return a number of unread messages and read messages that are up to end date.
         Create (dict) unread_info_dict = {"Read": num_all - num_unread, "Unread": num}
+        :return None
         """
         unread_label = 'Unread'
         read_label = 'Read'
