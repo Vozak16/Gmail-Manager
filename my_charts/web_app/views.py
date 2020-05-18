@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import View
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .modules import containers
+from .modules.gmail_manager import GUser
 
 
 class GetStarted(View):
@@ -66,15 +66,10 @@ class ChartData(APIView):
                 "default": default_items,
                 "colors": colors
         }
+        data_unread = GUser.get_unread_info()
 
-        labels_unread = ["Unread", "Read"]
-        default_items_unread = [256, 87]
         colors_unread = ['#6F6CB1', '#CBC9E4']
-        data_unread = {
-            "labels": labels_unread,
-            "default": default_items_unread,
-            "colors": colors_unread
-        }
+        data_unread['colors'] = colors_unread
 
         all_data = {
             "data": data,

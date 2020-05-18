@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/program_modules/auth_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/program_modules/auth_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/views.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +29,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -40,19 +42,7 @@
       <recent name="$PROJECT_DIR$/output_data_examples" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.test_gmail_manager_adt">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Gmail-Manager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,6 +57,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_gmail_manager_adt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Gmail-Manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_charts/web_app/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_charts/web_app/modules/test_gmail_manager_adt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_gmail_manager_adt" />
         <item itemvalue="Python.test_unsubscribe_adt" />
       </list>
     </recent_temporary>
@@ -115,6 +128,7 @@
       <updated>1586447913324</updated>
       <workItem from="1586697882125" duration="2800000" />
       <workItem from="1587025946620" duration="11000" />
+      <workItem from="1589776427068" duration="5703000" />
     </task>
     <task id="LOCAL-00001" summary="hid 2 functions">
       <created>1589270728255</created>
@@ -141,13 +155,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hid 2 functions" />
@@ -159,22 +172,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1586448010337" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1586448029950">
+    <state width="1398" height="190" key="GridCell.Tab.0.bottom" timestamp="1589789436796">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586448029950" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1586448029949">
+    <state width="1398" height="190" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589789436796" />
+    <state width="1398" height="190" key="GridCell.Tab.0.center" timestamp="1589789436795">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586448029949" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1586448029948">
+    <state width="1398" height="190" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1589789436795" />
+    <state width="1398" height="190" key="GridCell.Tab.0.left" timestamp="1589789436794">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586448029948" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1586448029949">
+    <state width="1398" height="190" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1589789436794" />
+    <state width="1398" height="190" key="GridCell.Tab.0.right" timestamp="1589789436795">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586448029949" />
+    <state width="1398" height="190" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1589789436795" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1586701116901">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -183,5 +196,19 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="374" y="284" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1586682753486" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/my_charts/web_app/modules/auth_adt.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Gmail_Manager$test_gmail_manager_adt.coverage" NAME="test_gmail_manager_adt Coverage Results" MODIFIED="1589789430129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
   </component>
 </project>
