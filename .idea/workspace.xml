@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="Added to set">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/auth_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/auth_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/gmail_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/gmail_manager.py" afterDir="false" />
-    </list>
+    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +123,7 @@
       <updated>1586447913324</updated>
       <workItem from="1586697882125" duration="2800000" />
       <workItem from="1587025946620" duration="11000" />
-      <workItem from="1589776427068" duration="14486000" />
+      <workItem from="1589776427068" duration="14802000" />
     </task>
     <task id="LOCAL-00001" summary="hid 2 functions">
       <created>1589270728255</created>
@@ -171,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589795457415</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added method, which deletes token.pickle file; changed the categories order representation in charts on Home web page.">
+      <created>1589802486170</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589802486170</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +197,8 @@
     <MESSAGE value="ADT work examples created" />
     <MESSAGE value="Added main modules to django app, connecting &quot;read-unread&quot; dictionary to web page." />
     <MESSAGE value="Added new method to GUser, connected &quot;category_info&quot; dictionary to web page chart." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new method to GUser, connected &quot;category_info&quot; dictionary to web page chart." />
+    <MESSAGE value="Added method, which deletes token.pickle file; changed the categories order representation in charts on Home web page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method, which deletes token.pickle file; changed the categories order representation in charts on Home web page." />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
@@ -205,10 +209,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589794764767" />
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589801944414">
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589802485860">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589801944414" />
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589802485860" />
     <state width="1398" height="190" key="GridCell.Tab.0.bottom" timestamp="1589799948413">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
