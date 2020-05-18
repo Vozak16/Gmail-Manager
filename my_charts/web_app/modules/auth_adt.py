@@ -12,8 +12,7 @@ class Auth:
     """
     Class provides Gmail user's authentication.
     """
-    SCOPES = ['https://www.googleapis.com/auth/gmail.readonly',
-              'https://www.googleapis.com/auth/gmail.modify']
+    SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
     def __init__(self):
         """
