@@ -29,8 +29,8 @@ class GUser:
                             ('CATEGORY_PROMOTIONS', 'Promotions'),
                             ('CATEGORY_UPDATES', 'Updates'),
                             ('CATEGORY_FORUMS', 'Forums')]
-        self.defined_categories = ['Primary', 'Social',
-                                   'Promotions', 'Updates']
+        self.defined_categories = ['Primary', 'Promotions',
+                                   'Updates', 'Social']
         self.categories_info_dict = dict()
         self.defined_categories_info_dict = dict()
         self.messages_by_category_dict = dict()
@@ -38,6 +38,7 @@ class GUser:
         self.get_categories_info()
         self.get_unread_info()
         self.get_defined_categories_info()
+
 
     def get_defined_categories_info(self):
         """
@@ -47,7 +48,8 @@ class GUser:
         :return: None
         """
         for i in self.defined_categories:
-            self.defined_categories_info_dict[i] = self.categories_info_dict[i]
+            self.defined_categories_info_dict[i] = \
+                self.categories_info_dict[i]
 
     def set_service(self):
         """
@@ -57,6 +59,7 @@ class GUser:
         authenticator = Auth()
 
         self.service = authenticator.service
+        authenticator.delete_token() # delete token.pickle file
 
     def get_end_date(self):
         """
