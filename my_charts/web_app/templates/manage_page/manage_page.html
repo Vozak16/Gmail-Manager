@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+        <title>Gmail Manager</title>
+
+        <!-- Site Layout -->
+        {% load static %}
+        {% include 'manage_page/base/css.html' %}
+        {% include 'manage_page/base/bootstrap_defaults.html' %}
+        <defs>
+            <style type="text/css">
+            @font-face {
+                font-family: Delicious;
+                src: url('../../../static/fonts/main.ttf');
+            }
+            </style>
+        </defs>
+    </head>
+
+    <body>
+        <div class="MainGrid">
+
+            <!-- Navigation Menu -->
+            <div class="Menu">
+                <div class="MenuImageBox">
+                    <div class="MenuImage"></div>
+                </div>
+
+                <!-- Nav Site Block -->
+                <div class="Site">
+                    <p class="MenuBlockText">Site</p>
+                    <div class="HomeButton">
+                        <img class="HomeButtonIco" src="../../static/Images/Icons/Home-Icon.png" alt="">
+                        <input type="submit" name="home_btn" class="submit_btn" value="Home">
+                    </div>
+                    <div class="AboutButton">
+                        <img class="AboutButtonIco" src="../../static/Images/Icons/About-Icon.png" alt="">
+                        <form action="/" method="get" class="btn_form">
+                            <input type="submit" name="about_btn" class="submit_btn" value="About">
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Nav Inbox Block -->
+                <div class="Inbox">
+                    <p class="MenuBlockText">Inbox</p>
+                    <div class="PrimaryButton">
+                        <img class="PrimaryButtonIco" src="../../static/Images/Icons/Primary-Icon.png" alt="">
+                        <input type="submit" name="primary_btn" class="submit_btn" value="Primary">
+                    </div>
+                    <div class="SocialButton">
+                        <img class="SocialButtonIco" src="../../static/Images/Icons/Social-Icon.png" alt="">
+                        <input type="submit" name="social_btn" class="submit_btn" value="Social">
+                    </div>
+                    <div class="PromotionsButton">
+                        <img class="PromotionsButtonIco" src="../../static/Images/Icons/Promotions-Icon.png" alt="">
+                        <input type="submit" name="promotions_btn" class="submit_btn" value="Promotions">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Block -->
+            <div class="Container">
+                <div class="header">
+                    <div class="Links">
+                        <img class="LinkIcons" src="../../static/Images/Icons/GitHub-Icon.png" alt="">
+                        <img class="LinkIcons" src="../../static/Images/Icons/Gmail-Icon.png" alt="">
+                    </div>
+                    <div class="AuthorizationInformation">
+                        <p class="UserName">Dwayne Johnson</p>
+                        <img class="UserImage" src="../../static/Images/Icons/UserImage.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Right Container Block -->
+                <div class="ContentInner">
+
+                    <!-- Welcome -->
+                    <div class="StatsBlock" style="background-image: url(../../../static/Images/stats-bg4.svg); background-size: cover;">
+                        <div class="myChart_" style="display: flex; justify-content: center; align-items: center; padding-left: 5px; padding-bottom: 15px; background: none;">
+                            <canvas id="myChart" width="250" height="250"></canvas>
+                        </div>
+                    </div>
+                    <!-- Inbox Stats -->
+                    <div class="ManageBlock">
+                        <div class="SenderContainerGrid">
+                            <!-- For -->
+                            {% block content %}
+
+                            {% endblock %}
+                            <!-- End For -->
+                        </div>
+                    </div>
+
+                    <!-- Instructions -->
+                    <div class="InstructionBlock" style="background-image: url(../../../static/Images/long-inst.svg); background-size: cover;"></div>
+                    <!-- Run Chart Script -->
+                    {% include 'manage_page/base/js.html' %}
+                    <script>
+                        $(document).ready(function(){
+                            {% block jquery %}{% endblock %}
+                        })
+                    </script>
+                  </div>
+                  <!-- End of Block -->
+            </div>
+        </div>
+    </body>
+</html>
