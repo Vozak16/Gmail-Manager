@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gmail-Manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_charts/web_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/views.py" afterDir="false" />
     </list>
@@ -128,7 +126,7 @@
       <updated>1586447913324</updated>
       <workItem from="1586697882125" duration="2800000" />
       <workItem from="1587025946620" duration="11000" />
-      <workItem from="1589776427068" duration="5703000" />
+      <workItem from="1589776427068" duration="7774000" />
     </task>
     <task id="LOCAL-00001" summary="hid 2 functions">
       <created>1589270728255</created>
@@ -144,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589282108204</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added main modules to django app, connecting &quot;read-unread&quot; dictionary to web page.">
+      <created>1589789708162</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589789708162</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added main modules to django app, connecting &quot;read-unread&quot; dictionary to web page.">
+      <created>1589789742195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589789742195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,29 +177,38 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hid 2 functions" />
     <MESSAGE value="ADT work examples created" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADT work examples created" />
+    <MESSAGE value="Added main modules to django app, connecting &quot;read-unread&quot; dictionary to web page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added main modules to django app, connecting &quot;read-unread&quot; dictionary to web page." />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1586448010337" />
-    <state width="1398" height="190" key="GridCell.Tab.0.bottom" timestamp="1589789436796">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589790726086">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589789436796" />
-    <state width="1398" height="190" key="GridCell.Tab.0.center" timestamp="1589789436795">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589790726086" />
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589789741892">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1589789436795" />
-    <state width="1398" height="190" key="GridCell.Tab.0.left" timestamp="1589789436794">
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589789741892" />
+    <state width="1398" height="190" key="GridCell.Tab.0.bottom" timestamp="1589791460432">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1589789436794" />
-    <state width="1398" height="190" key="GridCell.Tab.0.right" timestamp="1589789436795">
+    <state width="1398" height="190" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589791460432" />
+    <state width="1398" height="190" key="GridCell.Tab.0.center" timestamp="1589791460431">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1589789436795" />
+    <state width="1398" height="190" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1589791460431" />
+    <state width="1398" height="190" key="GridCell.Tab.0.left" timestamp="1589791460430">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="190" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1589791460430" />
+    <state width="1398" height="190" key="GridCell.Tab.0.right" timestamp="1589791460431">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="190" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1589791460431" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1586701116901">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -209,6 +230,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Gmail_Manager$test_gmail_manager_adt.coverage" NAME="test_gmail_manager_adt Coverage Results" MODIFIED="1589789430129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
+    <SUITE FILE_PATH="coverage/Gmail_Manager$test_gmail_manager_adt.coverage" NAME="test_gmail_manager_adt Coverage Results" MODIFIED="1589791449187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
   </component>
 </project>

@@ -66,8 +66,13 @@ class ChartData(APIView):
                 "default": default_items,
                 "colors": colors
         }
-        data_unread = GUser.get_unread_info()
-
+        user = GUser()
+        unread_info = user.unread_info_dict
+        print(unread_info)
+        data_unread = {
+            "labels": unread_info.keys(),
+            "default": unread_info.values(),
+        }
         colors_unread = ['#6F6CB1', '#CBC9E4']
         data_unread['colors'] = colors_unread
 
