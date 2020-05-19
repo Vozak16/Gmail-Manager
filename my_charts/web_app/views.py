@@ -37,7 +37,6 @@ class HomeView(View):
         :param request: Django request
         :return: Django.render
         """
-
         return render(request, 'home_page/chart.html', {})
 
 
@@ -115,10 +114,13 @@ class ManageChartData(APIView):
 
         :return: response
         """
-
-        labels = ["Users", "Blue", "Yellow"]
-        default_items = [4, 2, 2]
-        colors = ['#6F6CB1', '#F7C362', '#86CEC1']
+        global GMAIL_USER
+        labels = GMAIL_USER.chart_inbox_info.keys()
+        default_items = GMAIL_USER.chart_inbox_info.values()
+        colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',
+                  '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',
+                  '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1']
+        colors = colors[:len(labels)]
         data = {
             "labels": labels,
             "default": default_items,
@@ -131,6 +133,7 @@ sender_dict = []
 
 
 class ModifyManageView(View):
+    @staticmethod
     def get(request):
         global sender_dict
         str_request = (str(request))
