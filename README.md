@@ -1,11 +1,8 @@
-![](https://img.shields.io/github/license/LastGenius-edu/homeworks_project)
-![](https://img.shields.io/github/commit-activity/w/LastGenius-edu/homeworks_project)
-![](https://img.shields.io/github/last-commit/LastGenius-edu/homeworks_project)
-![](https://img.shields.io/github/languages/code-size/LastGenius-edu/homeworks_project)
+![]
 ## Project name: Gmail_Manager
 
 # [Finished site]
-![](https://github.com/LastGenius-edu/homeworks_project/raw/master/docs/site.png)
+![]
 
 ## Description: 
 
