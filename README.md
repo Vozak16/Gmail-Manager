@@ -1,5 +1,9 @@
-![]
-## Project name: Gmail_Manager
+![](https://img.shields.io/github/license/Vozak16/Gmail-Manager)
+![](https://img.shields.io/github/commit-activity/w/Vozak16/Gmail-Manager)
+![](https://img.shields.io/github/last-commit/Vozak16/Gmail-Manager)
+![](https://img.shields.io/github/languages/code-size/Vozak16/Gmail-Manager)
+# Gmail_Manager
+> First CS year coursework
 
 # [Finished site]
 ![](https://github.com/Vozak16/Gmail-Manager/blob/master/Gmail-Manager-Preview.png)
@@ -33,7 +37,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Usage: 
-1. This project was developed by **** and **Bohdan Vey**
+1. Visit our website and follow user-friendly interface.
 
 ## Contributing: 
 
