@@ -5,7 +5,7 @@
 # Gmail_Manager
 > First CS year coursework
 
-# [Finished site]
+## Website: [Finished site]
 ![](https://github.com/Vozak16/Gmail-Manager/blob/master/Gmail-Manager-Preview.png)
 
 ## Description: 
