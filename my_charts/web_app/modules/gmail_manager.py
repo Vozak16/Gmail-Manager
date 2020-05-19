@@ -34,7 +34,7 @@ class GUser:
                             ('CATEGORY_PROMOTIONS', 'Promotions'),
                             ('CATEGORY_UPDATES', 'Updates'),
                             ('CATEGORY_FORUMS', 'Forums')]
-        self.defined_categories = ['Primary', 'Promotions',
+        self.defined_categories = ['Promotions',
                                    'Updates', 'Social']
         self.categories_info_dict = dict()
         self.defined_categories_info_dict = dict()
@@ -146,9 +146,9 @@ class GUser:
             msg_num += len(sender_message_id_set)
             sender_message_id_set.clear()
 
-        print('senders=', senders_num)
-        print('total time', total_time)
-        print('messages_category', msg_num)
+        # print('senders=', senders_num)
+        # print('total time', total_time)
+        # print('messages_category', msg_num)
         self.inbox_info = inbox_info_dict
         self.get_subscription_info()
         self.get_chart_inbox_info()
@@ -206,6 +206,7 @@ class GUser:
             sender_name = message["payload"]["headers"][0]["value"]
             if sender_name != sender_email:
                 sender_name = sender_name[:sender_name.index("<")].strip()
+            sender_name = sender_name.strip(' "''')
             return sender_name, sender_email
 
         return None
@@ -277,7 +278,6 @@ class GUser:
                 unsubscribe_urls = self.get_unsubscribe_url(msg_str)
                 http_url = self.get_http_url(unsubscribe_urls)
             except AttributeError:
-                print('ka')
                 continue
 
             if not http_url:
@@ -369,6 +369,7 @@ class GUser:
         messages = self.sub_info[sender]['msg_ids']
         for msg_id in messages:
             self.service.users().messages().trash(userId='me', id=msg_id).execute()
+        self.chart_inbox_info.pop(sender)
 
     @staticmethod
     def write_json(inbox_info_dict):
