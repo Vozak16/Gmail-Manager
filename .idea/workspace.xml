@@ -27,18 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my_charts/web_app/modules/credentials.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_charts/web_app/modules/token.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adt_work_examples/example_gmail_manager_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/adt_usage_examples/example_usage_gmail_manager_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adt_work_examples/example_unsubscribe_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/adt_usage_examples/example_usage_unsubscribe_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/gmail_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/gmail_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/test_gmail_manager_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/test_gmail_manager_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/test_unsubscribe_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/test_unsubscribe_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/unsubscribe.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/unsubscribe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/templates/home_page/base/css.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/templates/home_page/base/css.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_charts/web_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +202,7 @@
       <workItem from="1589776427068" duration="15377000" />
       <workItem from="1589837727171" duration="776000" />
       <workItem from="1589865577165" duration="24102000" />
-      <workItem from="1589905941459" duration="1919000" />
+      <workItem from="1589905941459" duration="4685000" />
     </task>
     <task id="LOCAL-00001" summary="hid 2 functions">
       <created>1589270728255</created>
@@ -278,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589837819086</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="views updated">
+      <created>1589908020562</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589908020562</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +311,8 @@
     <MESSAGE value="Added new method to GUser, connected &quot;category_info&quot; dictionary to web page chart." />
     <MESSAGE value="Added method, which deletes token.pickle file; changed the categories order representation in charts on Home web page." />
     <MESSAGE value="Merge branch 'master' of https://github.com/Vozak16/Gmail-Manager&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Vozak16/Gmail-Manager&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="views updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="views updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
@@ -326,10 +323,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589794764767" />
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589837818799">
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589908020315">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589837818799" />
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589908020315" />
     <state width="1398" height="328" key="GridCell.Tab.0.bottom" timestamp="1589902178304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -350,6 +347,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1589907309167" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1589908040394">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1589908040394" />
     <state x="374" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1586682753486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
