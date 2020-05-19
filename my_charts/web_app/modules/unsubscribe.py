@@ -1,4 +1,4 @@
-from .auth_adt import Auth
+from auth_adt import Auth
 from apiclient import errors
 import urlfetch
 import base64
@@ -21,7 +21,7 @@ class GUnsubscribe:
         Return a raw message
 
         :param msg_id: str
-        :return: message
+        :return: str
         """
         try:
             message = self.service.users().messages().get(userId='me', id=msg_id, format='raw').execute()
@@ -86,7 +86,7 @@ class GUnsubscribe:
         """
         results_ = self.service.users().messages().list(userId='me', labelIds=[category]).execute()
         messages = results_.get('messages')
-        # print(len(messages))
+        print(len(messages))
         for msg in messages:
             msg_id = msg['id']
             msg_str = self.get_message(msg_id)

@@ -1,5 +1,6 @@
-from .unsubscribe import GUnsubscribe
+from unsubscribe import GUnsubscribe
 import urlfetch
+import time
 
 
 def main():
@@ -8,10 +9,14 @@ def main():
     :return: None
     """
     sender_info = GUnsubscribe()
+    time1 = time.time()
     sender_info.get_subscription_info('CATEGORY_PROMOTIONS')
+    time2 = time.time()
+    print("get_inbox_info proceeded, time =", time2 - time1)
     mail_info_dict = sender_info.sub_info
     print("Subscription Info: \n")
     print(mail_info_dict)
+    print(mail_info_dict.keys())
 
     if mail_info_dict:
         # Unsubscribe

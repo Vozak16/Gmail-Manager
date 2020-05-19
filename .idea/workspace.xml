@@ -26,7 +26,20 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="" />
+    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my_charts/web_app/modules/credentials.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_charts/web_app/modules/token.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adt_work_examples/example_gmail_manager_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/adt_usage_examples/example_usage_gmail_manager_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adt_work_examples/example_unsubscribe_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/adt_usage_examples/example_usage_unsubscribe_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/gmail_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/gmail_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/test_gmail_manager_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/test_gmail_manager_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/test_unsubscribe_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/test_unsubscribe_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/modules/unsubscribe.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/modules/unsubscribe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/templates/home_page/base/css.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/templates/home_page/base/css.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_charts/web_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_charts/web_app/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,17 +65,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my_charts/web_app/modules" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/my_charts/web_app/modules" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/program_modules" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/output_data_examples" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_gmail_manager_adt">
+  <component name="RunManager" selected="Python.test_unsubscribe_adt (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Gmail-Manager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,6 +123,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_unsubscribe_adt (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Gmail-Manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_charts/web_app/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_charts/web_app/modules/test_unsubscribe_adt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_unsubscribe_adt" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Gmail-Manager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,9 +167,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="unsubscribe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Gmail-Manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_charts/web_app/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_charts/web_app/modules/unsubscribe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_gmail_manager_adt" />
+        <item itemvalue="Python.test_unsubscribe_adt (1)" />
+        <item itemvalue="Python.unsubscribe" />
         <item itemvalue="Python.test_unsubscribe_adt" />
       </list>
     </recent_temporary>
@@ -149,8 +211,9 @@
       <workItem from="1586697882125" duration="2800000" />
       <workItem from="1587025946620" duration="11000" />
       <workItem from="1589776427068" duration="15377000" />
-      <workItem from="1589884886102" duration="279000" />
-      <workItem from="1589885198035" duration="2256000" />
+      <workItem from="1589837727171" duration="776000" />
+      <workItem from="1589865577165" duration="24102000" />
+      <workItem from="1589905941459" duration="1919000" />
     </task>
     <task id="LOCAL-00001" summary="hid 2 functions">
       <created>1589270728255</created>
@@ -208,21 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589802777381</updated>
     </task>
-    <task id="LOCAL-00009" summary="added third page of the site, created new classes in views.py and connected to new urls">
-      <created>1589835742706</created>
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/Vozak16/Gmail-Manager&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1589837819086</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1589835742706</updated>
+      <updated>1589837819086</updated>
     </task>
-    <task id="LOCAL-00010" summary="some changes">
-      <created>1589905574707</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1589905574707</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,9 +314,8 @@
     <MESSAGE value="Added main modules to django app, connecting &quot;read-unread&quot; dictionary to web page." />
     <MESSAGE value="Added new method to GUser, connected &quot;category_info&quot; dictionary to web page chart." />
     <MESSAGE value="Added method, which deletes token.pickle file; changed the categories order representation in charts on Home web page." />
-    <MESSAGE value="added third page of the site, created new classes in views.py and connected to new urls" />
-    <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/Vozak16/Gmail-Manager&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Vozak16/Gmail-Manager&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
@@ -271,40 +326,38 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589794764767" />
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589905566520">
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589837818799">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589905566520" />
-    <state width="1398" height="190" key="GridCell.Tab.0.bottom" timestamp="1589799948413">
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589837818799" />
+    <state width="1398" height="328" key="GridCell.Tab.0.bottom" timestamp="1589902178304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589799948412" />
-    <state width="1398" height="190" key="GridCell.Tab.0.center" timestamp="1589799948411">
+    <state width="1398" height="328" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589902178304" />
+    <state width="1398" height="328" key="GridCell.Tab.0.center" timestamp="1589902178303">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1589799948411" />
-    <state width="1398" height="190" key="GridCell.Tab.0.left" timestamp="1589799948408">
+    <state width="1398" height="328" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1589902178303" />
+    <state width="1398" height="328" key="GridCell.Tab.0.left" timestamp="1589902178302">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1589799948408" />
-    <state width="1398" height="190" key="GridCell.Tab.0.right" timestamp="1589799948412">
+    <state width="1398" height="328" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1589902178302" />
+    <state width="1398" height="328" key="GridCell.Tab.0.right" timestamp="1589902178303">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="190" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1589799948412" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1589885563973">
+    <state width="1398" height="328" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1589902178303" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1589907309167">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1589885563973" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1589907309167" />
     <state x="374" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1586682753486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="374" y="284" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1586682753486" />
-    <state x="314" y="245" key="git4idea.merge.GitPullDialog" timestamp="1589905619471">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="314" y="245" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1589905619471" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Gmail_Manager$test_gmail_manager_adt.coverage" NAME="test_gmail_manager_adt Coverage Results" MODIFIED="1589792314362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
+    <SUITE FILE_PATH="coverage/Gmail_Manager$test_unsubscribe_adt__1_.coverage" NAME="test_unsubscribe_adt (1) Coverage Results" MODIFIED="1589899066899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
+    <SUITE FILE_PATH="coverage/Gmail_Manager$test_gmail_manager_adt.coverage" NAME="test_gmail_manager_adt Coverage Results" MODIFIED="1589901491902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
+    <SUITE FILE_PATH="coverage/Gmail_Manager$unsubscribe.coverage" NAME="unsubscribe Coverage Results" MODIFIED="1589893010152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_charts/web_app/modules" />
   </component>
 </project>
