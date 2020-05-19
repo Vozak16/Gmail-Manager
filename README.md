@@ -2,7 +2,7 @@
 ## Project name: Gmail_Manager
 
 # [Finished site]
-![]
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/Gmail-Manager-Preview.png)
 
 ## Description: 
 
