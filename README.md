@@ -33,7 +33,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Usage: 
-1. 
+1. This project was developed by **** and **Bohdan Vey**
 
 ## Contributing: 
 
@@ -41,6 +41,9 @@ If you want to contribute in one way or another, open an issue or clone and inst
 
 ## Credits: 
 
-Volodymyr Savchuk/Yaroslav Morozevych, UCU, 2020
+This project was developed by **Yaroslav Morozevych** and **Volodymyr Savchuk**, UCU, 2020
 
 ## License:  
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
+
