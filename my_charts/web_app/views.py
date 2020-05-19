@@ -58,7 +58,7 @@ class ChartData(APIView):
         global GMAIL_USER
         labels = GMAIL_USER.defined_categories_info_dict.keys()
         default_items = GMAIL_USER.defined_categories_info_dict.values()
-        colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#28C9D1']
+        colors = ['#6F6CB1', '#86CEC1', '#F7C362']
         data = {
                 "labels": labels,
                 "default": default_items,
@@ -94,15 +94,14 @@ class ManageView(View):
         :param request: Django request
         :return: Django.render
         """
-        category = 'Promotions'  # сорі, кращого способу не знайшов,
+        category = request.GET['btn']
         # цей найшвидший
         if category == 'Promotions':
             category = 'CATEGORY_PROMOTIONS'
         elif category == 'Social':
             category = 'CATEGORY_SOCIAL'
-        else:
+        elif category == 'Updates':
             category = 'CATEGORY_UPDATES'
-
 
         global GMAIL_USER
         GMAIL_USER.get_inbox_info(category)
@@ -127,9 +126,10 @@ class ManageChartData(APIView):
         global GMAIL_USER
         labels = GMAIL_USER.chart_inbox_info.keys()
         default_items = GMAIL_USER.chart_inbox_info.values()
-        colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',
-                  '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',
-                  '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1']
+        colors = ['#6F6CB1', '#CBC9E4', '#86CEC1', '#A6DAD2', '#6396B9', '#A0C8DF', '#F7C362', '#F2CC8f', '#E25470',
+                  '#ED8CA4', '#6F6CB1', '#CBC9E4', '#86CEC1', '#6A6DAD2', '#6396B9', '#A0C8DF', '#F7C362', '#F2CC8f', '#E25470',
+                  '#ED8CA4', '#6F6CB1', '#CBC9E4', '#86CEC1', '#6A6DAD2', '#6396B9', '#A0C8DF', '#F7C362', '#F2CC8f', '#E25470',
+                  '#ED8CA4']
         colors = colors[:len(labels)]
         data = {
             "labels": labels,
@@ -153,16 +153,20 @@ class ModifyManageView(View):
 
         if action == 'Quick Trash':
             GMAIL_USER.delete_messages(sender)
+            print(GMAIL_USER.chart_inbox_info)
+            print(GMAIL_USER.lst_sender_sub)
         elif action == 'Unsubscribe':
             GMAIL_USER.unsubscribe(sender)
 
-        return render(request, 'manage_page/manage_page.html', {"senders": GMAIL_USER.lst_sender_sub})
+        return render(request, 'modify_manage_page/modify_manage_page.html', {"senders": GMAIL_USER.lst_sender_sub})
 
 
 class ModifyChartData(APIView):
+    @staticmethod
     def get(request):
 
         global GMAIL_USER
+        print(GMAIL_USER.chart_inbox_info)
         labels = GMAIL_USER.chart_inbox_info.keys()
         default_items = GMAIL_USER.chart_inbox_info.values()
         colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',

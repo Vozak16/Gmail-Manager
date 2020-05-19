@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^about$', views.ManageView.as_view(), name='home'),
     url(r'^api/chart/data/$', views.ChartData.as_view()),
     url(r'api/manage/chart/data/$', views.ManageChartData.as_view()),
+    url(r'api/modify/manage/chart/data/$', views.ModifyChartData.as_view()),
     url(r'^delete/$', views.ModifyManageView.as_view())
 ]

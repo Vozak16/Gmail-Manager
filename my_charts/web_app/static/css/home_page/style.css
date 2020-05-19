@@ -68,7 +68,7 @@ pre {
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    background-image: url(../../Images/inbox-bg.png);
+    background-image: url(../../Images/inbox-bg.svg);
 }
 
 .UnreadBlock {
@@ -133,11 +133,6 @@ pre {
     color: #606060;
     display: flex;
     justify-content: center;
-}
-
-.btn_form {
-    display: flex;
-    align-items: center
 }
 
 .HomeButton:hover {
@@ -235,8 +230,8 @@ pre {
 
 .MenuImage {
     margin-top: 10%;
-    background-image: url(../../Images/Icons/MenuImg.png);
-    height: 84px;
+    background-image: url(../../Images/site-logo.svg);
+    height: 64px;
     width: 64px;
     background-size: cover;
     background-position: center;

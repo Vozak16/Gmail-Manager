@@ -16,40 +16,44 @@
             <!-- Navigation Menu -->
             <div class="Menu">
                 <div class="MenuImageBox">
-                    <div class="MenuImage"></div>
+                    <div class="MenuImage" style="width: 64px; height: 64px; background-image: url(../../static/Images/site-logo.svg)"></div>
                 </div>
 
                 <!-- Nav Site Block -->
                 <div class="Site">
                     <p class="MenuBlockText">Site</p>
-                    <div class="HomeButton">
-                        <img class="HomeButtonIco" src="../../static/Images/Icons/Home-Icon.png" alt="">
-                        <input type="submit" name="home_btn" class="submit_btn" value="Home">
-                    </div>
+                    <form action="/home" method="get" class="btn_form">
+                        <div class="HomeButton">
+                            <img class="HomeButtonIco" src="../../static/Images/Icons/Home-Icon.svg" alt="">
+                            <input type="submit" name="btn" class="submit_btn" value="Home">
+                        </div>
+                    </form>
                     <div class="AboutButton">
-                        <img class="AboutButtonIco" src="../../static/Images/Icons/About-Icon.png" alt="">
-                        <form action="/about" method="get" class="btn_form">
-                            <input type="submit" name="about_btn" class="submit_btn" value="About">
-                        </form>
+                        <img class="AboutButtonIco" src="../../static/Images/Icons/About-Icon.svg" alt="">
+
+                            <input type="submit" name="btn" class="submit_btn" value="About">
                     </div>
+
                 </div>
 
                 <!-- Nav Inbox Block -->
+                <form action="/about" method="get">
                 <div class="Inbox">
                     <p class="MenuBlockText">Inbox</p>
                     <div class="PrimaryButton">
-                        <img class="PrimaryButtonIco" src="../../static/Images/Icons/Primary-Icon.png" alt="">
-                        <input type="submit" name="primary_btn" class="submit_btn" value="Primary">
+                        <img class="PrimaryButtonIco" src="../../static/Images/Icons/Primary-Icon.svg" alt="">
+                        <input type="submit" name="btn" class="submit_btn" value="Updates">
                     </div>
                     <div class="SocialButton">
-                        <img class="SocialButtonIco" src="../../static/Images/Icons/Social-Icon.png" alt="">
-                        <input type="submit" name="social_btn" class="submit_btn" value="Social">
+                        <img class="SocialButtonIco" src="../../static/Images/Icons/Social-Icon.svg" alt="">
+                        <input type="submit" name="btn" class="submit_btn" value="Social">
                     </div>
                     <div class="PromotionsButton">
-                        <img class="PromotionsButtonIco" src="../../static/Images/Icons/Promotions-Icon.png" alt="">
-                        <input type="submit" name="promotions_btn" class="submit_btn" value="Promotions">
+                        <img class="PromotionsButtonIco" src="../../static/Images/Icons/Promotions-Icon.svg" alt="">
+                        <input type="submit" name="btn" class="submit_btn" value="Promotions">
                     </div>
                 </div>
+                </form>
             </div>
 
             <!-- Header Block -->
