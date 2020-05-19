@@ -9,6 +9,7 @@
 ![](https://github.com/Vozak16/Gmail-Manager/blob/master/Gmail-Manager-Preview.png)
 
 ## Description: 
+Gmail-Manager is a web-application, which …
 
 
 
