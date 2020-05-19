@@ -94,8 +94,18 @@ class ManageView(View):
         :param request: Django request
         :return: Django.render
         """
+        category = 'Promotions'  # сорі, кращого способу не знайшов,
+        # цей найшвидший
+        if category == 'Promotions':
+            category = 'CATEGORY_PROMOTIONS'
+        elif category == 'Social':
+            category = 'CATEGORY_SOCIAL'
+        else:
+            category = 'CATEGORY_UPDATES'
+
+
         global GMAIL_USER
-        GMAIL_USER.get_inbox_info('CATEGORY_PROMOTIONS')
+        GMAIL_USER.get_inbox_info(category)
 
         return render(request, 'manage_page/chart.html', {"senders": GMAIL_USER.lst_sender_sub})
 
@@ -129,9 +139,6 @@ class ManageChartData(APIView):
         return Response(data)
 
 
-sender_dict = []
-
-
 class ModifyManageView(View):
     @staticmethod
     def get(request):
@@ -145,21 +152,26 @@ class ModifyManageView(View):
         action = request.GET[sender]
 
         if action == 'Quick Trash':
-            try:
-                # delete sender from sender's dict
-                pass
-            except KeyError:
-                # run unsubscribe.delete_massages(sender)
-                pass
+            GMAIL_USER.delete_messages(sender)
         elif action == 'Unsubscribe':
-            pass
-        # run unsubscribe.unsubscribe(sender)
+            GMAIL_USER.unsubscribe(sender)
 
-        return None  # render(request, 'manage_page/manage_page.html', {"senders": sender_dict.keys()})
+        return render(request, 'manage_page/manage_page.html', {"senders": GMAIL_USER.lst_sender_sub})
 
 
 class ModifyChartData(APIView):
     def get(request):
-        global sender_dict
-        # the same data as in ManageChartData(), but modified
+
+        global GMAIL_USER
+        labels = GMAIL_USER.chart_inbox_info.keys()
+        default_items = GMAIL_USER.chart_inbox_info.values()
+        colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',
+                  '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1',
+                  '#6F6CB1', '#F7C362', '#86CEC1', '#6F6CB1', '#F7C362', '#86CEC1']
+        colors = colors[:len(labels)]
+        data = {
+            "labels": labels,
+            "default": default_items,
+            "colors": colors
+        }
         return Response(data)
