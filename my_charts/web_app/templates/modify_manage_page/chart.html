@@ -1,0 +1,25 @@
+{% extends 'modify_manage_page/modify_manage_page.html' %}
+
+<!-- Receives data from view.py -->
+<script>
+{% block jquery %}
+    {% include 'modify_manage_page/base/chart_script.js' with posts=postdata %}
+{% endblock %}
+</script>
+{% block content %}
+    {% for sender in senders %}
+        <div style="display: flex; justify-content: flex-start; align-items: center; background-color: white;">
+            <div class="NameHolder" style="white-space: nowrap; width: 48%; display: flex; align-items: center;">
+                <p class="SenderName" style="font-size: 14px; padding-left: 6%; padding-top: 6%; color: #606060;">
+                    {{sender}}
+                </p>
+            </div>
+            <form action="delete" method="GET" style="display: inline; margin: 0;">
+                <div class="ManageButtons" style="margin: 0; padding: 0;">
+                    <input type="submit" name="{{sender}}" class="QuickTrash" value="Quick Trash">
+                    <input type="submit" name="{{sender}}" class="Unsubscribe" value="Unsubscribe">
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock %}

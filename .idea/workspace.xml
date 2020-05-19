@@ -26,9 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="282e3411-904d-4619-ab10-88457c07734b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,6 +201,7 @@
       <workItem from="1589837727171" duration="776000" />
       <workItem from="1589865577165" duration="24102000" />
       <workItem from="1589912020208" duration="5708000" />
+      <workItem from="1589918315055" duration="261000" />
     </task>
     <task id="LOCAL-00001" summary="hid 2 functions">
       <created>1589270728255</created>
@@ -274,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589917652076</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new .idea">
+      <created>1589918413785</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589918413785</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +318,8 @@
     <MESSAGE value="Added method, which deletes token.pickle file; changed the categories order representation in charts on Home web page." />
     <MESSAGE value="Merge branch 'master' of https://github.com/Vozak16/Gmail-Manager&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="added new icons, colors, buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new icons, colors, buttons" />
+    <MESSAGE value="new .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="new .idea" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="113" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586448010337">
@@ -323,10 +330,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589794764767" />
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589917651877">
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2" timestamp="1589918413547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589917651877" />
+    <state x="83" y="23" width="1273" height="811" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589918413547" />
     <state width="1398" height="328" key="GridCell.Tab.0.bottom" timestamp="1589902178304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -347,10 +354,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1586701116901" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1589917668939">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1589918427995">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1589917668939" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1589918427995" />
     <state x="374" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1586682753486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
