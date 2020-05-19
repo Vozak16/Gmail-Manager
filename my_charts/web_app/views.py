@@ -163,4 +163,3 @@ class ModifyChartData(APIView):
         global sender_dict
         # the same data as in ManageChartData(), but modified
         return Response(data)
-
