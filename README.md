@@ -6,16 +6,7 @@
 
 ## Description: 
 
-The project aims to analyze a huge library of openly available Project Gutenberg classic English texts and find out:
-* The specific changes that took places during the course of history and evolution of the English language
-* The differences between the writings of different authors and especially the differences between male and female writers (word usage, the problems brought up)
-* The causes of the specific changes
-* The name and word usage
-* Usage of color descriptions
 
-The results of this project include an interactive visualization of these changes, as well as word portraits of the specific authors, periods and books.
-
-In order to ensure the quick response and search given the size and the number of the texts the efficient data structures are used.
 
 ## Table of Contents: 
 
