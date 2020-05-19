@@ -2,10 +2,15 @@
 This module ...
 """
 from .auth_adt import Auth
+from apiclient import errors
+import urlfetch
+import base64
 import datetime
 import re
 import time
 import json
+import ssl
+import certifi
 
 
 class GUser:
@@ -35,10 +40,13 @@ class GUser:
         self.defined_categories_info_dict = dict()
         self.messages_by_category_dict = dict()
         self.unread_info_dict = dict()
+        self.sub_info = dict()
+        self.inbox_info = dict()
+        self.chart_inbox_info = dict()
+        self.lst_sender_sub = list()
         self.get_categories_info()
         self.get_unread_info()
         self.get_defined_categories_info()
-
 
     def get_defined_categories_info(self):
         """
@@ -92,7 +100,7 @@ class GUser:
         internal_date = int(message["internalDate"][:-3])
         return datetime.datetime.fromtimestamp(internal_date)
 
-    def get_inbox_info(self, ladelid='CATEGORY_PERSONAL'):
+    def get_inbox_info(self, ladelid='INBOX'):
         """
         Return a dictionary that has sender as a key and number
         of messages as a value.
@@ -132,7 +140,8 @@ class GUser:
                 inbox_info_dict[sender_email] += 1
             else:
                 inbox_info_dict[sender_email] = (len(sender_message_id_set),
-                                                 sender_info[0], next(iter(sender_message_id_set)))
+                                                 sender_info[0], next(iter(sender_message_id_set)),
+                                                 list(sender_message_id_set))
             label_message_id_set = label_message_id_set - sender_message_id_set
             msg_num += len(sender_message_id_set)
             sender_message_id_set.clear()
@@ -140,6 +149,10 @@ class GUser:
         print('senders=', senders_num)
         print('total time', total_time)
         print('messages_category', msg_num)
+        self.inbox_info = inbox_info_dict
+        self.get_subscription_info()
+        self.get_chart_inbox_info()
+        self.get_lst_sender_sub()
         return inbox_info_dict
 
     def get_user_messages_lst(self, ladelids='INBOX', sender_email=None):
@@ -233,14 +246,119 @@ class GUser:
         self.unread_info_dict[read_label] = self.categories_info_dict["Inbox"] \
                                             - self.unread_info_dict[unread_label]
 
-    def delete_message(self, message_id):
+    def get_raw_message(self, msg_id):
         """
-        Delete a certain message by message ID
+        Get the full email message data with body content in the raw field as a base64url.
+        Decode this message and
+        Return a raw message
 
-        :param message_id: str
+        :param msg_id: str
+        :return: str
         """
-        self.service.users().messages().trash(user_id=self.user_id,
-                                              id=message_id).execute()
+        try:
+            message = self.service.users().messages().get(userId='me', id=msg_id, format='raw').execute()
+            msg_str = base64.urlsafe_b64decode(message['raw'].encode('ASCII')).decode('utf-8', 'ignore')
+            return msg_str
+        except errors.HttpError as error:
+            print('An error occurred getting a message: %s' % error)
+
+    def get_subscription_info(self):
+        """
+        Update a dictionary. sub_info = {<sender_name>: {
+                                                'sub_url': str,
+                                                'msg_ids': list(str, ...)
+                                                }, ...}
+        """
+        senders_sub_num = 0
+        for value_tupl in self.inbox_info.values():
+            msg_str = self.get_raw_message(value_tupl[2])
+
+            try:
+                unsubscribe_urls = self.get_unsubscribe_url(msg_str)
+                http_url = self.get_http_url(unsubscribe_urls)
+            except AttributeError:
+                print('ka')
+                continue
+
+            if not http_url:
+                continue
+
+            sender = value_tupl[1]
+            senders_sub_num += 1
+
+            self.sub_info[sender] = {
+                'sub_url': http_url,
+                'msg_ids': value_tupl[3]
+            }
+        print(senders_sub_num)
+        return self.sub_info
+
+    @staticmethod
+    def get_unsubscribe_url(msg_str):
+        """
+        Return a list of <mailto: link> and <https: link>
+
+        :param msg_str: str
+        :return: str
+        """
+        pattern = re.compile(r"(?<=List-Unsubscribe: <)(.*)(?=>)")
+        match = pattern.search(msg_str)
+        if match:
+            return match.group(0)
+        return None
+
+    @staticmethod
+    def get_http_url(urls):
+        """
+        Return http unsubscribe url if it exists,
+        else return None
+
+        :param urls: list(str, str)
+        :return: str
+        """
+        url_list = urls.split('>, <')
+        for url in url_list:
+            pattern = re.compile(r"http(s)?:.*")
+            match = pattern.search(url)
+            if match:
+                return url
+        return None
+
+    def unsubscribe(self, sender):
+        """
+        Unsubscribe from a certain sender by his/her unsubscribe url.
+
+        :param sender: str
+        """
+        ctx = ssl.create_default_context(cafile=certifi.where())
+        try:
+            url = self.sub_info[sender]['sub_url']
+            response = urlfetch.get(url)
+            print(response.status)
+        except urlfetch.UrlfetchException:
+            print('Unsubscribe timeout exceeded!')
+
+    def get_chart_inbox_info(self):
+        """
+        Transforms self.inbox_info to dictionary in
+        special format for chart in web page.
+        :return: dict
+        """
+        for i in self.inbox_info.values():
+            self.chart_inbox_info[i[1]] = i[0]
+        return self.chart_inbox_info
+
+    def get_lst_sender_sub(self):
+        """
+        Transforms self.sub_info to list with only names
+        of the senders, from whom GUser can unsubscribe.
+        :return: list
+        """
+        for i in self.sub_info.keys():
+            self.lst_sender_sub.append(i)
+        if len(self.lst_sender_sub) >= 8:
+            self.lst_sender_sub = self.lst_sender_sub[:7]
+        return self.lst_sender_sub
 
     @staticmethod
     def write_json(inbox_info_dict):

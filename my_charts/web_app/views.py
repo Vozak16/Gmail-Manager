@@ -5,6 +5,8 @@ from rest_framework.response import Response
 from .modules.gmail_manager import GUser
 import re
 
+GMAIL_USER = None
+
 
 class GetStarted(View):
     """
@@ -18,6 +20,8 @@ class GetStarted(View):
         :param request: Django request
         :return: Django.render
         """
+        global GMAIL_USER
+        GMAIL_USER = GUser()
         return render(request, 'get_started/get_started.html')
 
 
@@ -33,22 +37,8 @@ class HomeView(View):
         :param request: Django request
         :return: Django.render
         """
+
         return render(request, 'home_page/chart.html', {})
-
-
-class ManageView(View):
-    """
-    Create a Home page
-    """
-    @staticmethod
-    def get(request):
-        """
-        Return a rendered template
-
-        :param request: Django request
-        :return: Django.render
-        """
-        return render(request, 'manage_page/chart.html', {"senders": ["Matthew Kenenitz", 'Vova Savchuk']})
 
 
 class ChartData(APIView):
@@ -65,10 +55,10 @@ class ChartData(APIView):
 
         :return: response
         """
-        user = GUser()
 
-        labels = user.defined_categories_info_dict.keys()
-        default_items = user.defined_categories_info_dict.values()
+        global GMAIL_USER
+        labels = GMAIL_USER.defined_categories_info_dict.keys()
+        default_items = GMAIL_USER.defined_categories_info_dict.values()
         colors = ['#6F6CB1', '#F7C362', '#86CEC1', '#28C9D1']
         data = {
                 "labels": labels,
@@ -76,7 +66,7 @@ class ChartData(APIView):
                 "colors": colors
         }
 
-        unread_info = user.unread_info_dict
+        unread_info = GMAIL_USER.unread_info_dict
 
         print(unread_info)
         data_unread = {
@@ -93,6 +83,24 @@ class ChartData(APIView):
         return Response(all_data)
 
 
+class ManageView(View):
+    """
+    Create a Home page
+    """
+    @staticmethod
+    def get(request):
+        """
+        Return a rendered template
+
+        :param request: Django request
+        :return: Django.render
+        """
+        global GMAIL_USER
+        GMAIL_USER.get_inbox_info('CATEGORY_PROMOTIONS')
+
+        return render(request, 'manage_page/chart.html', {"senders": [GMAIL_USER.lst_sender_sub]})
+
+
 class ManageChartData(APIView):
     """
     Create a ChartData class with REST Framework
@@ -107,6 +115,7 @@ class ManageChartData(APIView):
 
         :return: response
         """
+
         labels = ["Users", "Blue", "Yellow"]
         default_items = [4, 2, 2]
         colors = ['#6F6CB1', '#F7C362', '#86CEC1']
@@ -118,14 +127,37 @@ class ManageChartData(APIView):
         return Response(data)
 
 
-def get_sender(request):
-    str_request = (str(request))
+sender_dict = []
 
-    pattern = re.compile(r"(?<=<WSGIRequest: GET '\/delete\/\?)(.*)(?=\=)")
-    match = pattern.search(str_request)
-    if match:
-        sender = str.replace(str(match.group(0)), '+', ' ')
-    print(sender)
-    action = request.GET[sender]
-    print(action)
-    return HttpResponse('')
+
+class ModifyManageView(View):
+    def get(request):
+        global sender_dict
+        str_request = (str(request))
+
+        pattern = re.compile(r"(?<=<WSGIRequest: GET '\/delete\/\?)(.*)(?=\=)")
+        match = pattern.search(str_request)
+        if match:
+            sender = str.replace(str(match.group(0)), '+', ' ')
+        action = request.GET[sender]
+
+        if action == 'Quick Trash':
+            try:
+                # delete sender from sender's dict
+                pass
+            except KeyError:
+                # run unsubscribe.delete_massages(sender)
+                pass
+        elif action == 'Unsubscribe':
+            pass
+        # run unsubscribe.unsubscribe(sender)
+
+        return None  # render(request, 'manage_page/manage_page.html', {"senders": sender_dict.keys()})
+
+
+class ModifyChartData(APIView):
+    def get(request):
+        global sender_dict
+        # the same data as in ManageChartData(), but modified
+        return Response(data)
+
