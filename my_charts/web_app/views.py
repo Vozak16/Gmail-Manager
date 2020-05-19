@@ -98,7 +98,7 @@ class ManageView(View):
         global GMAIL_USER
         GMAIL_USER.get_inbox_info('CATEGORY_PROMOTIONS')
 
-        return render(request, 'manage_page/chart.html', {"senders": [GMAIL_USER.lst_sender_sub]})
+        return render(request, 'manage_page/chart.html', {"senders": GMAIL_USER.lst_sender_sub})
 
 
 class ManageChartData(APIView):
@@ -160,4 +160,3 @@ class ModifyChartData(APIView):
         global sender_dict
         # the same data as in ManageChartData(), but modified
         return Response(data)
-

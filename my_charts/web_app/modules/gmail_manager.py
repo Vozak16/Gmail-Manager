@@ -360,6 +360,16 @@ class GUser:
             self.lst_sender_sub = self.lst_sender_sub[:7]
         return self.lst_sender_sub
 
+    def delete_messages(self, sender):
+        """
+        Delete all messages from a certain sender.
+
+        :param sender: str
+        """
+        messages = self.sub_info[sender]['msg_ids']
+        for msg_id in messages:
+            self.service.users().messages().trash(userId='me', id=msg_id).execute()
+
     @staticmethod
     def write_json(inbox_info_dict):
         """
