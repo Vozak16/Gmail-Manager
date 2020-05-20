@@ -8,8 +8,6 @@
 ![](https://github.com/Vozak16/Gmail-Manager/blob/master/Gmail-Manager-Preview.png)
 
 ## Table of contents
-* [Purpose](#Purpose)
-
 * [Description](#Description)
 
 * [Input and Output data](#Input-and-Output-Data)
@@ -26,14 +24,21 @@
 
 * [Licence](#Licence)
 
-
-## Purpose:
-
-
 ## Description: 
-Gmail-Manager is a web-application, which …
+Gmail-Manager is a web-application, which helps Gmail users to analyze and manage subscriptions in their mail inbox, delete the messages from the specific sender. 
+In the web application user can:
+* Register with his/her gmail inbox and gives permission to view and modify his/her email.
+* View and analyze the quantity of messages in the pre-defined categories:'Promotions', 'Updates', 'Social' from the last 30 days.
+* View and analyze the quantity of messages in the pre-defined categories:'Read', 'Unread' from the last 30 days.
+* Choose one of the pre-defined categories:'Promotions', 'Updates', 'Social' to  view and analyze the quantity of messages in this category by each sender from the last 30 days.
+* Choose one of the pre-defined categories:'Promotions', 'Updates', 'Social' to delete all the messages in this category from the specific sender from the last 30 days.
+* Choose one of the pre-defined categories:'Promotions', 'Updates', 'Social' to unsubscribe from the specific sender, whose messages belongs to this category.
 
 ## Input and Output data:
+All the data was loaded with one kind of API:
+* [Gmail API]
+(https://developers.google.com/gmail/api)
+ 
 
 ## Program structure and content:
 
