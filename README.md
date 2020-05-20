@@ -53,7 +53,21 @@ $ cd my_charts
 $ python3 manage.py runserver
 ```
 
+## Usage examples:
 
+First step is to log in with your Gmail account. User follow the two next steps.
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/usage_examples/user_registraion_part1.png)
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/usage_examples/user_registraion_part2.png)
+
+User moves to the page Get Started and press the "GET STARTED" button
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/usage_examples/get_started_1page.png)
+
+After pressing the "GET STARTED" button user will see the following page with the quantity of messages in the pre-defined categories:'Read', 'Unread', Promotions', 'Updates', 'Social' from the last 30 days.
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/usage_examples/read_unread_messages_page2.png)
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/usage_examples/messages_by_main_categories_page2.png)
+
+Then user be pressing the specific category button in the menu on page's left can view and analyze the quantity of messages in this category by each sender from the last 30 days.
+![](https://github.com/Vozak16/Gmail-Manager/blob/master/usage_examples/messages_by_sender_page3.png)
 
 ## Contributing: 
 
