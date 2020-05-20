@@ -5,40 +5,50 @@
 # Gmail_Manager
 > First CS year coursework
 
-## Website: [Finished site]
 ![](https://github.com/Vozak16/Gmail-Manager/blob/master/Gmail-Manager-Preview.png)
+
+## Table of contents
+* [Purpose](#Purpose)
+
+* [Description](#Description)
+
+* [Input and Output data](#Input-and-Output-Data)
+
+* [Program structure and content](#Program-structure-and-content)
+
+* [Installation and usage](#Installation-and-usage)
+
+* [Usage examples](#Usage-examples)
+
+* [Contributing](#Contributing)
+
+* [Credits](#Credits)
+
+* [Licence](#Licence)
+
+
+## Purpose:
+
 
 ## Description: 
 Gmail-Manager is a web-application, which …
 
+## Input and Output data:
+
+## Program structure and content:
 
 
-## Table of Contents: 
-
-### Wiki pages:
-
-[Домашнє Завдання №0 на Wiki]()
-
-[Домашнє Завдання №1 на Wiki](https://github.com/Vozak16/Gmail-Manager/wiki/1.-Домашнє-завдання-№1)
-
-[Домашнє Завдання №2 на Wiki](https://github.com/Vozak16/Gmail-Manager/wiki/2.-Домашнє-завдання-№2)
-
-[Домашнє Завдання №3 на Wiki](https://github.com/Vozak16/Gmail-Manager/wiki/3.-Домашнє-завдання-№3)
-
-[Домашнє Завдання №4 на Wiki](https://github.com/Vozak16/Gmail-Manager/wiki/4.-Домашнє-завдання-№4)
-
-[Домашнє Завдання №5 на Wiki](https://github.com/Vozak16/Gmail-Manager/wiki/5.-Домашнє-завдання-№5)
-
-## Installation: 
+## Installation and usage: 
 
 ```bash
 $ git clone https://github.com/Vozak16/Gmail-Manager
 $ cd Gmail-Manager
 $ pip install -r requirements.txt
+$ cd my_charts
+$ python3 manage.py runserver
 ```
 
-## Usage: 
-1. Visit our website and follow user-friendly interface.
+
 
 ## Contributing: 
 
