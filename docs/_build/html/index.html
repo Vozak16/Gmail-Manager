@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Gmail_Manager’s documentation! &#8212; Gmail_Manager  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-my_charts.web_app.modules.gmail_manager">
+<span id="welcome-to-gmail-manager-s-documentation"></span><h1>Welcome to Gmail_Manager’s documentation!<a class="headerlink" href="#module-my_charts.web_app.modules.gmail_manager" title="Permalink to this headline">¶</a></h1>
+<p>This module …</p>
+<dl class="py class">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser">
+<em class="property">class </em><code class="sig-prename descclassname">my_charts.web_app.modules.gmail_manager.</code><code class="sig-name descname">GUser</code><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class provides Gmail user’s interface.</p>
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.delete_messages">
+<code class="sig-name descname">delete_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sender</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.delete_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all messages from a certain sender.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sender</strong> – str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_categories_info">
+<code class="sig-name descname">get_categories_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_categories_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create (dict) messages_by_category_dict = {“Unread”: list,
+“Inbox”: list,”Primary”: list, “Social”: list,
+“Promotions”: list, “Updates”: list, “Forums”: list}
+Create (dict) categories_info_dict = {“Unread”: int, “Inbox”: int,
+“Primary”: int, “Social”: int, “Promotions”: int, “Updates”: int,
+“Forums”: int}
+:return None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_chart_inbox_info">
+<code class="sig-name descname">get_chart_inbox_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_chart_inbox_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms self.inbox_info to dictionary in
+special format for chart in web page.
+:return: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_defined_categories_info">
+<code class="sig-name descname">get_defined_categories_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_defined_categories_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create (dict) defined_categories_info_dict =
+{“Primary”: num, ‘Social’:num,
+“Updates”: num, “Promotions”: num}
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_end_date">
+<code class="sig-name descname">get_end_date</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_end_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a date that is a month before the today’s date
+(eg. “2020-04-07”)
+:return: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_http_url">
+<em class="property">static </em><code class="sig-name descname">get_http_url</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">urls</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_http_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return http unsubscribe url if it exists,
+else return None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>urls</strong> – list(str, str)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_inbox_info">
+<code class="sig-name descname">get_inbox_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ladelid</span><span class="o">=</span><span class="default_value">'INBOX'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_inbox_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary that has sender as a key and number
+of messages as a value.
+:return: inbox_info = {from (str): tuple(value (int),
+sender_name, sender_msg_id), …}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_lst_sender_sub">
+<code class="sig-name descname">get_lst_sender_sub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_lst_sender_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms self.sub_info to list with only names
+of the senders, from whom GUser can unsubscribe.
+:return: list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_message_date">
+<em class="property">static </em><code class="sig-name descname">get_message_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_message_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the message date with special formatting.
+:param message: dict
+:return: string</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_raw_message">
+<code class="sig-name descname">get_raw_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_raw_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the full email message data with body content in the raw field as a base64url.
+Decode this message and
+Return a raw message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msg_id</strong> – str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_subscription_info">
+<code class="sig-name descname">get_subscription_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_subscription_info" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update a dictionary. sub_info = {&lt;sender_name&gt;: {</dt><dd><p>‘sub_url’: str,
+‘msg_ids’: list(str, …)
+}, …}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_unread_info">
+<code class="sig-name descname">get_unread_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_unread_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a number of unread messages and read messages that are up to end date.
+Create (dict) unread_info_dict = {“Read”: num_all - num_unread, “Unread”: num}
+:return None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_unsubscribe_url">
+<em class="property">static </em><code class="sig-name descname">get_unsubscribe_url</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg_str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_unsubscribe_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of &lt;mailto: link&gt; and &lt;https: link&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msg_str</strong> – str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.get_user_messages_lst">
+<code class="sig-name descname">get_user_messages_lst</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ladelids</span><span class="o">=</span><span class="default_value">'INBOX'</span></em>, <em class="sig-param"><span class="n">sender_email</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.get_user_messages_lst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns user messages list on the last 30 days,
+which contains only an id and a threadId.
+Additional message details can be fetched
+using the messages.get method.
+:return: list of dict [{‘id’: ‘1714f35d4d28e916’,</p>
+<blockquote>
+<div><p>‘threadId’: ‘1714f35d4d28e916’}, …]</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.is_valid_date">
+<code class="sig-name descname">is_valid_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.is_valid_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if a message date is bigger than the end date,
+False otherwise
+:return: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.retrieve_sender_info">
+<code class="sig-name descname">retrieve_sender_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.retrieve_sender_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves such information as name of the sender and its email address.
+:message_id: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>tuple of str  = (“name”, “email”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.set_service">
+<code class="sig-name descname">set_service</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.set_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a service got by user’s credentials
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.unsubscribe">
+<code class="sig-name descname">unsubscribe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sender</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.unsubscribe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsubscribe from a certain sender by his/her unsubscribe url.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sender</strong> – str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.gmail_manager.GUser.write_json">
+<em class="property">static </em><code class="sig-name descname">write_json</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inbox_info_dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.gmail_manager.GUser.write_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function loads the data from the dictionary to json file.
+Namely, it loads the data got from GUser.get_inbox_info method.
+:param inbox_info_dict: dict
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-my_charts.web_app.modules.auth_adt"></span><p>This module implements auth ADT.</p>
+<dl class="py class">
+<dt id="my_charts.web_app.modules.auth_adt.Auth">
+<em class="property">class </em><code class="sig-prename descclassname">my_charts.web_app.modules.auth_adt.</code><code class="sig-name descname">Auth</code><a class="headerlink" href="#my_charts.web_app.modules.auth_adt.Auth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class provides Gmail user’s authentication.</p>
+<dl class="py method">
+<dt id="my_charts.web_app.modules.auth_adt.Auth.authorization">
+<code class="sig-name descname">authorization</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.auth_adt.Auth.authorization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns of credential of a user, in other words authorizes him/her.
+:return: google.oauth2.credentials.Credentials</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.auth_adt.Auth.delete_token">
+<em class="property">static </em><code class="sig-name descname">delete_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.auth_adt.Auth.delete_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deleting token.pickle file.
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="my_charts.web_app.modules.auth_adt.Auth.set_service">
+<code class="sig-name descname">set_service</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_charts.web_app.modules.auth_adt.Auth.set_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of self.service.
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Gmail_Manager</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Volodymyr Savchuk.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
