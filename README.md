@@ -12,8 +12,6 @@
 
 * [Input and Output data](#Input-and-Output-Data)
 
-* [Program structure and content](#Program-structure-and-content)
-
 * [Installation and usage](#Installation-and-usage)
 
 * [Usage examples](#Usage-examples)
@@ -38,9 +36,6 @@ In the web application user can:
 All the data was loaded with one kind of API:
 * [Gmail API]
 (https://developers.google.com/gmail/api)
- 
-
-## Program structure and content:
 
 
 ## Installation and usage: 
