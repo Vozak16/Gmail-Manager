@@ -163,7 +163,7 @@ sqlparse==0.3.1
 sympy==1.5.1
 uritemplate==3.0.1
 urlfetch==1.2.1
-urllib3==1.25.7
+urllib3==1.26.5
 Werkzeug==1.0.0
 whatever==0.5
 wrapt==1.11.2
